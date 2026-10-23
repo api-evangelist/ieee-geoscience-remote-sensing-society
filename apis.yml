@@ -1,23 +1,74 @@
 aid: ieee-geoscience-remote-sensing-society
+
 name: IEEE Geoscience & Remote Sensing Society
-description: 'IEEE Geoscience & Remote Sensing Society is a company surfaced via the API Evangelist harvest
-  backlog (source: vc-portfolio) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.grss-ieee.org/wp-content/uploads/2021/04/pixabay_satellite-1030779_1920.jpg
+
+description: 'The IEEE Geoscience & Remote Sensing Society provides publications, conferences, webinars, standards, and a member community for researchers and practitioners working in geoscience and remote sensing.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ieee-geoscience-remote-sensing-society/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
-- Company
-apis: []
+- Publications
+- Conferences
+- Membership
+- Research Community
+- Remote Sensing
+- Geoscience
+- Standards
+- Education
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/ieee-geoscience-remote-sensing-society-well-known.yml
+- type: Hosts
+  url: hosts/ieee-geoscience-remote-sensing-society-hosts.yml
+- type: Vendors
+  url: vendors/ieee-geoscience-remote-sensing-society-vendors.yml
+- type: Newsroom
+  url: https://www.grss-ieee.org/news/
+- type: Blog
+  url: https://www.grss-ieee.org/technical-committees/remote-sensing-environment-analysis-and-climate-technologies/blog/big-questions-in-climate-change-how-can-geosciences-remote-sensing-facilitate-informed-and-sustainable-climate-action-in-developing-countries/
+- type: DomainSecurity
+  url: security/ieee-geoscience-remote-sensing-society-domain-security.yml
 - type: Website
   url: http://www.grss-ieee.org/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  method: derived
+  generated: '2026-10-23'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company's own front door answers a browser with an anti-bot challenge, so nothing behind it is reachable by any reader
+  evidence:
+  - url: http://www.grss-ieee.org/
+    status: 403
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
